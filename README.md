@@ -1,3 +1,3 @@
 # blogfront
 
-dongmini.net
+www.dongmini.net

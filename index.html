@@ -1,61 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Dongmini Blog</title>
-    <style>
-        body {
-            background-color: #232F3E;
-        }
-
-        label,
-        button {
-            color: #FF9900;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            margin-left: 40px;
-        }
-
-        input {
-            color: #232F3E;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            margin-left: 20px;
-        }
-    </style>
-    <script>
-        var callAPI = (text) => {
-            // instantiate a headers object
-            var myHeaders = new Headers();
-            // add content type header to object
-            myHeaders.append("Content-Type", "application/json");
-            // using built in JSON utility package turn object to string and store in a variable
-            var raw = JSON.stringify({ "text": text });
-            // create a JSON object with parameters for API call and store in a variable
-            var requestOptions = {
-                method: 'POST',
-                headers: myHeaders,
-                body: raw,
-                redirect: 'follow'
-            };
-            // make API call with parameters and use promises to get response
-            fetch("https://jbrnbwq2kb.execute-api.ap-northeast-2.amazonaws.com/dev", requestOptions)
-                .then(response => response.text())
-                .then(result => alert(JSON.parse(result).body))
-                .catch(error => console.log('error', error));
-        }
-    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
-    <form>
-        <label>Say anything to me! :</label>
-        <input type="text" id="text">
-        <!-- set button onClick method to call function we defined passing input values as parameters -->
-        <button type="button" onclick="callAPI(document.getElementById('text').value)">Write
-        </button>
-    </form>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="topbar">
+        <form onsubmit="return callAPI(document.getElementById('text').value)">
+            <input class="text" id="text" type="text" required placeholder="Say anything to me!">
+            <input class="btn" type="submit" value="Write">
+        </form>
+    </div>
 </body>
 
 </html>
