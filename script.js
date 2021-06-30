@@ -11,7 +11,7 @@ var callAPI = (text) => {
     fetch("https://jbrnbwq2kb.execute-api.ap-northeast-2.amazonaws.com/dev", requestOptions)
         .then(response => response.text())
         .then(result => alert(JSON.parse(result).body))
-        .catch(error => console.log('error', error));
+        .catch(error => alert('error', error));
 }
 
 var scan = () => {
