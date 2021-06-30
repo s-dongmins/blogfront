@@ -8,7 +8,6 @@
 }
 body {
     overflow: hidden;
-    display: flex;
     background: linear-gradient(to bottom,#f1f4f9, #dff1ff);
     min-height: 100vh;
 }
@@ -46,7 +45,7 @@ form {
     justify-content: center;
     align-items: center;
 }
-.text {
+.textin {
     width: 80%;
     background: rgba(255,255,255,0.2);
     outline: none;
@@ -57,7 +56,7 @@ form {
     border-bottom: 1px solid rgba(255,255,255,0.2);
     border-radius: 35px;
     font-size: 14px;
-    color: #fff;
+    color: rgb(88, 88, 88);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 .btn {
@@ -71,4 +70,26 @@ form {
     font-size: 14px;
     color: #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    width: 80%;
+    background: rgba(255,255,255,0.2);
+    margin: 10px 20px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-radius: 35px;
+    font-size: 14px;
+    color: rgb(88, 88, 88);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.time {
+    font-size: 8px;
 }

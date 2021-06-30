@@ -10,14 +10,14 @@
     <script type="text/javascript" src="script.js"></script>
 </head>
 
-<body>
+<body onload="scan();">
     <div class="color"></div>
     <div class="color"></div>
     <div class="color"></div>
     <div class="topbar">
-        <form onsubmit="return callAPI(document.getElementById('text').value)">
-            <input class="text" id="text" type="text" required placeholder="Say anything to me!">
-            <input class="btn" type="submit" value="Write">
+        <form>
+            <input class="textin" id="text" type="text" required placeholder="Say anything to me!">
+            <button class="btn" onclick="callAPI(document.getElementById('text').value)">Write</button>
         </form>
     </div>
 </body>
