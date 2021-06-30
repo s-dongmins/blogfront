@@ -7,9 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    overflow: hidden;
     background: linear-gradient(to bottom,#f1f4f9, #dff1ff);
-    min-height: 100vh;
 }
 .color {
     position: absolute;
