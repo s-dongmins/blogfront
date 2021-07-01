@@ -19,8 +19,7 @@ var scan = () => {
         .then(response => response.json())
         .then(result => {
             body = JSON.parse(result.body);
-            console.log(body.Items)
-            for (var post of body.Items) {
+            for (var post of body.Items.sort((a, b) => { return b.time - a.time })) {
                 var div = document.createElement("div");
                 div.className = "post"
                 var text = document.createElement("span");
@@ -28,7 +27,8 @@ var scan = () => {
                 var text_text = document.createTextNode(post.text);
                 var time = document.createElement("span");
                 time.className = "time"
-                var time_text = document.createTextNode(post.time);
+                var date = new Date(post.time * 1000);
+                var time_text = document.createTextNode(date.toString().slice(0, 24));
                 text.appendChild(text_text);
                 time.appendChild(time_text);
                 div.appendChild(text);
