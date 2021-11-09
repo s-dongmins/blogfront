@@ -8,14 +8,14 @@ var callAPI = (text) => {
         body: raw,
         redirect: 'follow'
     };
-    fetch("https://jbrnbwq2kb.execute-api.ap-northeast-2.amazonaws.com/dev", requestOptions)
+    fetch("https://api.dongmini.net/", requestOptions)
         .then(response => response.text())
         .then(result => alert(JSON.parse(result).body))
         .catch(error => alert('error', error));
 }
 
 var scan = () => {
-    items = fetch("https://jbrnbwq2kb.execute-api.ap-northeast-2.amazonaws.com/dev/scan")
+    items = fetch("https://api.dongmini.net/scan")
         .then(response => response.json())
         .then(result => {
             body = JSON.parse(result.body);
